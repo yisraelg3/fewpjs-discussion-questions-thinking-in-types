@@ -96,20 +96,22 @@ document.addEventListener("DOMContentLoaded", function(){
 
 ### Example 5
 
+Oops. Looks like this developer made some mistakes typing. Identify the mistakes.
+
 ```html
 // index.html
 ...
 <script src="index.js" />
 
-<button id="notify">Click Me!</button>
+<button id="notifiable">Click Me!</button>
 
 ```
 
 ```js
 // index.js
-document.addEventListener("DOMContentLoaded", function(){
+document.addListenerEvent("DOMContentLoaded", function(){
   const button = document.getElementById("notifliable")
-  button.addEventListener('click', function(){
+  button.addListenerEvent('click', function(){
     console.log("Printing a Message!")
   })
 });
