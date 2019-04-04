@@ -2,8 +2,9 @@
 
 ## Objectives
 
-* Practice reading and reasoning about code
-* Discuss events with out
+* Recall the different types of JavaScript Events
+* Identify when the `DOMContentLoaded` event will trigger
+* Implement a callback attached to an event handler
 
 ## Exercise
 
