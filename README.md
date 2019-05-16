@@ -1,119 +1,25 @@
-# Discussion Questions: Events
+# Discussion Questions: MVC and Rails Render
 
 ## Objectives
 
-* Recall the different types of JavaScript Events
-* Identify when the `DOMContentLoaded` event will trigger
-* Implement a callback attached to an event handler
+* Recall the MVC pattern from Rails
+* Identify what `render` does in a Rails controller
+* Implement controller actions that render different types
+
+## MVC Review Questions
+
+Write your best answers to the following questions, then discuss with your group.
+
+1. What is the _Model_ responsible for in MVC?  What about the _Controller_? The _View_?
+2. Now that we are using JavaScript to build Single Page Applications, what changes do we need to make to the division of responsibilities in MVC? What is JavaScript responsible for? What is Rails responsible for?
+3. What kinds of formats can Rails render? List as many as you can. When you think you've got a full list, check out [Rails Guide on Rendering](https://guides.rubyonrails.org/layouts_and_rendering.html#using-render) to see if you missed any.
+4. Check out the other ways of sending data in Rails in the [ActionController::DataStreaming documentation](https://api.rubyonrails.org/v5.2.3/classes/ActionController/DataStreaming.html). Draw out how you would build a file download button. 
 
 ## Exercise
 
-Take a look at each of the code samples below. For each sample, work with your group to answer the following questions.
+Check out the rails app in the `rendering` folder. `bundle install` and `rails s` to get things running.
 
-1. What does each line of code do?
-2. How does this piece of code work?
-3. Given this code sample, what can you learn or describe about JavaScript
+Open `config/routes.rb` and `app/controllers/responses_controller.rb`. Add the `render`, `send_data`, and `send_file` lines to the controller so that all the routes work. Check them all by visiting the urls in the browser.
 
-### Example 1
 
-```html
-// index.html
-...
 
-<button id="notify">Click Me!</button>
-
-<script src="index.js" />
-```
-
-```js
-// index.js
-
-const button = document.getElementById("notify")
-button.addEventListener('click', function(){
-  console.log("Printing a Message!")
-})
-```
-
-### Example 2
-
-```html
-// index.html
-...
-
-<button id="notify">Click Me!</button>
-
-<script src="index.js" />
-```
-
-```js
-// index.js
-
-const button = document.getElementById("notify")
-button.addEventListener('mouseover', function(){
-  console.log("Printing a Message!")
-})
-```
-
-### Example 3
-
-```html
-// index.html
-...
-<script src="index.js" />
-
-<button id="notify">Click Me!</button>
-
-```
-
-```js
-// index.js
-
-const button = document.getElementById("notify")
-button.addEventListener('mouseover', function(){
-  console.log("Printing a Message!")
-})
-```
-
-### Example 4
-
-```html
-// index.html
-...
-<script src="index.js" />
-
-<button id="notify">Click Me!</button>
-
-```
-
-```js
-// index.js
-document.addEventListener("DOMContentLoaded", function(){
-  const button = document.getElementById("notify")
-  button.addEventListener('mouseover', function(){
-    console.log("Printing a Message!")
-  })
-});
-```
-
-### Example 5
-
-Oops. Looks like this developer made some mistakes typing. Identify the mistakes.
-
-```html
-// index.html
-...
-<script src="index.js" />
-
-<button id="notifiable">Click Me!</button>
-
-```
-
-```js
-// index.js
-document.addListenerEvent("DOMContentLoaded", function(){
-  const button = document.getElementById("notifliable")
-  button.addListenerEvent('click', function(){
-    console.log("Printing a Message!")
-  })
-});
-```
