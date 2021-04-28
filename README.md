@@ -20,11 +20,11 @@ For the following functions, fill in the table with the types of the inputs and 
 
 | Function                                         | types of inputs                  | type of output                |
 | ------------------------------------------------ | -------------------------------- | ----------------------------- |
-| `function addFive(number) { return number + 5}`  |                                  |                               |
-| `function sum(A, B) { return A + B }`            |                                  |                               |
-| `function concat(A, B) { return "" + A + B }`    |                                  |                               |
-| `document.querySelector`                         |                                  |                               |
-| `window.fetch`                                   |                                  |                               |
+| `function addFive(number) { return number + 5}`  |                          |         number                |                    number
+| `function sum(A, B) { return A + B }`            |                            |          number               |                    number
+| `function concat(A, B) { return "" + A + B }`    |                            |       string                  |                    string
+| `document.querySelector`                         |                            |       string                  |                    string
+| `window.fetch`                                   |                               |       string                  |                    string
 
 ### "Shapes" of `Object`s
 
@@ -77,11 +77,11 @@ Fill in the table using the 'shape' shorthand
 
 | Function      | types of inputs                  | type of output           |
 | ------------- | -------------------------------- | ------------------------ |
-| `getName`     |                                  |                          |
-| `getAge`      |                                  |                          |
-| `makePerson`  |                                  |                          |
-| `birthday`    |                                  |                          |
-| `getDistance` |                                  |                          |
+| `getName`     | object                           |  string                  |
+| `getAge`      | object                           |  number                  |
+| `makePerson`  | x = string, y = number           |  object                  |
+| `birthday`    | object                           |  object                  |
+| `getDistance` | object, object                   |  number                  |
 
 ### Function Signatures
 
@@ -101,11 +101,11 @@ For practice, add the function signature to the functions in the table.
 
 | Function      | types of inputs            | type of output             | function signature |
 | ------------- | -------------------------- | -------------------------- | ------------------ |
-| `getName`     |                            |                            |                    |
-| `getAge`      |                            |                            |                    |
-| `makePerson`  |                            |                            |                    |
-| `birthday`    |                            |                            |                    |
-| `getDistance` |                            |                            |                    |
+| `getName`     |(person: Person)  : string                         |                            |                    |
+| `getAge`      |(person: Person) : number                           |                            |                    |
+| `makePerson`  |(name: string, age: number): object                         |                            |                    |
+| `birthday`    |(person: Person) : object                      |                            |                    |
+| `getDistance` |(pointA: Point, pointB: Point): number                |                            |                    |
 
 ### Operators as 'Functions'
 
